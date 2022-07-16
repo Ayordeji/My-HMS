@@ -11,13 +11,15 @@
     <link rel="stylesheet" href="css/all.min.css">
     <link rel="stylesheet" href="css/style.css">
 
-    <title>Kimberly Hotel</title>
+    <title>Admin Thank You Page</title>
     <link rel="apple-touch-icon" sizes="180x180" href="img/apple-touch-icon.png">
     <link rel="icon" type="image/png" sizes="32x32" href="img/favicon-32x32.png">
     <link rel="icon" type="image/png" sizes="16x16" href="img/favicon-16x16.png">
     <link rel="manifest" href="site.webmanifest">
 </head>
 <body>
+
+    <!-- Header -->
     <header>
         <nav class="navbar bg-white d-flex justify-content-between border-bottom hms-border m-0 p-0 py-3 py-md-5 py-lg-0">
             <button class="navbar-toggler bg-pink-1 d-block d-lg-none py-2 px-3 ms-3" type="button" data-bs-toggle="offcanvas" data-bs-target="#adminMobileMenu" aria-controls="adminMobileMenu">
@@ -34,28 +36,34 @@
                     
                 </div>
             </div>
-
-            <a href="#" class="navbar-brand height-50px lg-height-75px ms-0 ms-lg-4 ms-xl-5">
+            <a href="#" class="navbar-brand height-50px md-height-75px ms-0 ms-lg-4 ms-xl-5">
                 <img src="img/logo.png" alt="Our Logo" class="h-100">
             </a>
-            
             <div class="user me-3 me-lg-4 me-xl-5 d-flex align-items-center">
                 <div class="user-text d-none d-lg-flex flex-column justify-content-center me-lg-4">
-                    <h6 class="text-pink fs-body-1 fw-700 m-0">Kingston I.</h6>
+                    <h6 class="text-pink fs-body-2 fw-700 m-0">Kingston I.</h6>
                     <p class="text-grey-1 text-center fs-input m-0 mt-1">Admin</p>
                 </div>
                 <div class="user-pic">
                     <img src="img/user-img.png" alt="User image" class="img-fluid">
                 </div>
             </div>
-
         </nav>
     </header>
 
+                    <!-- **************************END OF HEADERS**************************** -->
+
+                <!-- **************************BEGINNING OF MAIN SECTION**************************** -->
+
+        <!-- Copy the entire main element and delete what's in .main-content if you're building an admin page    -->
+
     <main>
         <div class="row p-0 m-0">
-            <div class="col-lg-2 d-none d-lg-block p-0 m-0">
-                <div class="sidenav bg-neutral-4 box-shad-2 d-flex flex-column justify-content-between border-end border-bottom hms-border">
+            <div class="col-lg-2 d-none d-lg-block bg-neutral-4 border-end hms-border p-0 m-0">
+
+        <!-- Below is the side navigation for admin pages. Be sure to confirm the right .sidenav-link div has the .active class attached    -->
+
+                <div class="sidenav bg-neutral-4 d-flex flex-column justify-content-between">
                     <div class="sidenav-link bg-neutral-4 d-flex align-items-center justify-content-center py-2">
                         <a href="#" class="text-decoration-none bg-neutral-4 ps-lg-2 ps-xl-4 py-3 w-100">
                             <p class="text-grey-1 fs-sidenav text-start m-0 ms-xl-2"><span class="iconify fs-body-2" data-icon="tabler:layout-dashboard"></span> Dashboard</p>
@@ -63,7 +71,7 @@
                     </div>
                     <div class="sidenav-link bg-neutral-4 d-flex align-items-center justify-content-center py-2 active">
                         <a href="#" class="text-decoration-none bg-neutral-4 ps-lg-2 ps-xl-4 py-3 w-100">
-                            <p class="text-grey-1 fs-sidenav text-start m-0 ms-xl-2"><span class="iconify fs-body-2" data-icon="eva:home-outline"></span> Bookings</p>
+                            <p class="text-grey-1 fs-sidenav text-start m-0 ms-xl-2"><span class="iconify fs-body-2" data-icon="eva:home-outline"></span> Rooms</p>
                         </a>
                     </div>
                     <div class="sidenav-link bg-neutral-4 d-flex align-items-center justify-content-center py-2">
@@ -86,150 +94,166 @@
                             <p class="text-grey-1 fs-sidenav text-start m-0 ms-xl-2"><span class="iconify fs-body-2" data-icon="fluent:settings-24-regular" data-rotate="90deg"></span> Settings</p>
                         </a>
                     </div>
-                    <div class="sidenav-link bg-neutral-4 d-flex align-items-center justify-content-center py-2">
-                        <a href="#" class="text-decoration-none bg-neutral-4 ps-lg-2 ps-xl-4 py-3 w-100">
-                            <p class="text-grey-1 fs-sidenav text-start m-0 ms-xl-2"><span class="iconify fs-body-2" data-icon="fluent:power-24-filled"></span> Log out</p>
+                    <div class="sidenav-link logout bg-neutral-4 d-flex align-items-center justify-content-center py-2">
+                        <a class="text-decoration-none bg-neutral-4 ps-lg-2 ps-xl-4 py-3 w-100 position-relative" role="button" data-bs-toggle="modal" data-bs-target="#logoutModal">
+                            <p class="text-grey-1 fs-sidenav error-text text-start m-0 ms-xl-2"><span class="iconify fs-body-2" data-icon="fluent:power-24-filled"></span> Log out</p>
                         </a>
+                        <div class="modal" id="logoutModal" tabindex="-1" aria-label="Logout" aria-hidden="true">
+                            <div class="modal-dialog modal-dialog-centered">
+                                <div class="modal-content bg-white border border-secondary p-0">
+                                    <div class="modal-body p-4 p-md-5">
+                                        <h6 class="text-center fs-body-2 text-black fw-700 mt-4">Are you sure you want to logout?</h6>
+                                        <div class="d-flex justify-content-between pt-2 pb-4">
+                                            <button type="button" class="ghost-primary-btn width-48 text-center fs-body-2 fw-700 text-pink bdr-rad-2 py-3 my-3" data-bs-dismiss="modal" aria-label="Close">No</button>
+                                            <button type="button" class="primary-btn width-48 text-center fs-body-2 fw-700 text-white bdr-rad-2 py-3 my-3">Yes</button>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
                     </div>
                 </div>
             </div>
 
-            <div class="col-lg-10 main-content col-12 ">
-                
-                    <div class="d-flex pt-5">
+        <!-- Main Content -->
+            <div class="main-content col-12 col-lg-10 position-relative">    <!--  This is .main-content   -->
+                <div class="container d-flex flex-md-row flex-column py-4 px-0 px-lg-4">
+                    
+                    <!-- Left-Section -->
+                    <div class="ms-3 me-4 mb-5 order-md-1 order-2">
+                                                                
+                        <span class="lg-text-grey-2 me-5 fs-tiny fw-700">December 2022</span>
+                        <span class="iconify" data-icon="akar-icons:chevron-left"></span>
+                        <span class="iconify" data-icon="akar-icons:chevron-right"></span>
+                        
                         <!-- Calendar -->
-                        <div class="ms-3 me-4">                                        
-                            <span class="Calendar-heading">
-                            <span class="lg-text-grey-2 me-5 fs-tiny fw-700">December 2022</span>
-                                <span class="iconify" data-icon="akar-icons:chevron-left"></span>
-                                <span class="iconify" data-icon="akar-icons:chevron-right"></span>
-                            </span>
-                            <table class="table-bordered table table-striped table mt-3 text-center width-250px height-200px">
-                                <thead>
-                                                    
-                                            <tr class="fs-tiny fw-600">
-                                                <th>Mo</th>
-                                                <th>Tu</th>
-                                                <th>We</th>
-                                                <th>Th</th>
-                                                <th>Fr</th>
-                                                <th>Sa</th>
-                                                <th>Su</th>
-                                            </tr>
-                                </thead>
+                        <table class="table-bordered table table-striped table mt-3 text-center width-250px height-200px">
+                            <thead>
+                                <tr class="fs-tiny fw-600">
+                                    <th>Mo</th>
+                                    <th>Tu</th>
+                                    <th>We</th>
+                                    <th>Th</th>
+                                    <th>Fr</th>
+                                    <th>Sa</th>
+                                    <th>Su</th>
+                                </tr>
+                            </thead>
 
-                                <tbody class="fs-tiny">
+                            <tbody class="fs-tiny">
+                                <tr class="bg-gold-1">                                            
+                                    <td class="bg-green">1</td>
+                                    <td>2</td>
+                                    <td>3</td>
+                                    <td>4</td>
+                                    <td>5</td>
+                                    <td>6</td>
+                                    <td>7</td>
+                                </tr>
 
-                                            <tr class="bg-gold-1">                                            
-                                                <td class="bg-green">1</td>
-                                                <td>2</td>
-                                                <td>3</td>
-                                                <td>4</td>
-                                                <td>5</td>
-                                                <td>6</td>
-                                                <td>7</td>
-                                            </tr>
+                                <tr class="bg-green">                                            
+                                    <td>8</td>
+                                    <td>9</td>
+                                    <td>10</td>
+                                    <td>11</td>
+                                    <td>12</td>
+                                    <td>13</td>
+                                    <td>14</td>
+                                </tr>
 
-                                            <tr class="bg-green">                                            
-                                                <td>8</td>
-                                                <td>9</td>
-                                                <td>10</td>
-                                                <td>11</td>
-                                                <td>12</td>
-                                                <td>13</td>
-                                                <td>14</td>
-                                            </tr>
+                                <tr class="bg-green">                                            
+                                    <td>15</td>
+                                    <td>16</td>
+                                    <td>17</td>
+                                    <td class="text-white">18</td>
+                                    <td class="text-white">19</td>
+                                    <td>20</td>
+                                    <td>21</td>
+                                </tr>
 
-                                            <tr class="bg-green">                                            
-                                                <td>15</td>
-                                                <td>16</td>
-                                                <td>17</td>
-                                                <td class="text-white">18</td>
-                                                <td class="text-white">19</td>
-                                                <td>20</td>
-                                                <td>21</td>
-                                            </tr>
+                                <tr class="bg-red">
+                                    <td>22</td>
+                                    <td>23</td>
+                                    <td>24</td>
+                                    <td>25</td>
+                                    <td>26</td>
+                                    <td>27</td>
+                                    <td>28</td>
+                                </tr>
 
-                                            <tr class="bg-red">
-                                                <td>22</td>
-                                                <td>23</td>
-                                                <td>24</td>
-                                                <td>25</td>
-                                                <td>26</td>
-                                                <td>27</td>
-                                                <td>28</td>
-                                            </tr>
+                                <tr>   
+                                    <td class="bg-green">29</td>
+                                    <td class="bg-green">30</td>
+                                    <td class="text-grey-4">1</td>
+                                    <td class="text-grey-4">2</td>
+                                    <td class="text-grey-4">3</td>
+                                    <td class="text-grey-4">4</td>
+                                    <td class="text-grey-4">5</td>
 
-                                            <tr>   
-                                                <td class="bg-green">29</td>
-                                                <td class="bg-green">30</td>
-                                                <td class="text-grey-4">1</td>
-                                                <td class="text-grey-4">2</td>
-                                                <td class="text-grey-4">3</td>
-                                                <td class="text-grey-4">4</td>
-                                                <td class="text-grey-4">5</td>
+                                </tr>
+                            </tbody>
+                        </table> 
+                        
+                        <!-- Below Calendar -->
+                        <div class="date-selectors">
+                            <div class="d-flex my-5 ">
+                                <p class="me-3 mt-3 text-black fs-copyright fw-700">Check-In</p>
 
-                                            </tr>
-                                </tbody>
-                            </table> 
-                            
-                            <!-- Below Calendar -->
-                            <div class="date-selectors">
-                                <div class="d-flex my-5 ">
-                                    <p class="me-3 mt-3 text-black fs-copyright fw-700">Check-In</p>
-    
-                                    <span class="border border-4 rounded-start p-1 text-center"><img src="img/date-input.png" alt=""></span>
-    
-                                    <span class="p-2 fs-tiny fs-copyright fw-700 border border-4 rounded-end text-center">18-12-2022</span>
-                                </div>
-    
-                                <div class="d-flex my-5 ">
-                                    <p class="me-2 mt-3 text-black fs-copyright fw-700">Check-Out</p>
-    
-                                    <span class="border border-4 rounded-start p-1 text-center"><img src="img/date-input.png" alt=""></span>
-    
-                                    <span class="p-2 fs-copyright fw-700 border border-4 rounded-end text-center">18-12-2022</span>
-                                </div>
-                                
-                                <form action="" class="d-flex">
-                                <label for="cars" class="fw-700 fs-copyright">Adult</label>
-                                <select name="cars" id="cars" class="ms-2">
-                                    <option value="one">1</option>
-                                    <option value="two">2</option>
-                                    <option value="three">3</option>
-                                    <option value="four">4</option>
-                                </select>
-    
-                                <label for="cars" class="fw-700 fs-copyright ms-5">Kids</label>
-                                <select name="cars" id="cars" class="ms-2">
-                                    <option value="one">1</option>
-                                    <option value="two">2</option>
-                                    <option value="three">3</option>
-                                    <option value="four">4</option>
-                                </select>
-                                </form>
+                                <span class="border border-4 rounded-start p-1 text-center"><img src="img/date-input.png" alt=""></span>
 
-                                <div class="pt-5">
-                                    <button type="button" class="btn btn-outline-danger me-3">Start Over</button>
-                                    <button type="button" class="ghost-primary-btn btn">Submit</button>
-                                </div>
+                                <span class="p-2 fs-tiny fs-copyright fw-700 border border-4 rounded-end text-center">18-12-2022</span>
                             </div>
-                        </div>                      
+
+                            <div class="d-flex my-5 ">
+                                <p class="me-2 mt-3 text-black fs-copyright fw-700">Check-Out</p>
+
+                                <span class="border border-4 rounded-start p-1 text-center"><img src="img/date-input.png" alt=""></span>
+
+                                <span class="p-2 fs-copyright fw-700 border border-4 rounded-end text-center">18-12-2022</span>
+                            </div>
+                            
+                            <form action="" class="d-flex">
+                            <label for="cars" class="fw-700 fs-copyright">Adult</label>
+                            <select name="cars" id="cars" class="ms-2">
+                                <option value="one">1</option>
+                                <option value="two">2</option>
+                                <option value="three">3</option>
+                                <option value="four">4</option>
+                            </select>
+
+                            <label for="cars" class="fw-700 fs-copyright ms-5">Kids</label>
+                            <select name="cars" id="cars" class="ms-2">
+                                <option value="one">1</option>
+                                <option value="two">2</option>
+                                <option value="three">3</option>
+                                <option value="four">4</option>
+                            </select>
+                            </form>
+
+                            <div class="pt-5">
+                                <button type="button" class="btn btn-outline-danger me-3">Start Over</button>
+                                <button type="button" class="ghost-primary-btn btn">Submit</button>
+                            </div>
+                        </div>
+
+                    </div>                      
+                
+                    <!-- Right Section -->
+                    <div class="w-100 order-md-2 order-1">
 
                         <!-- Purple Table Heading -->
-                        <div class="w-100 d-flex flex-column">
-                            <div class="border rounded bg-pink-1">
-                                <div class="container my-2 pt-4">
-                                    <h6 class="text-white mb-4 fs-footer fw-700">Search Criteria</h6>
-                                    <span class="d-flex flex-wrap text-white colour-group fs-footer fw-700"> 
-                                        <p class="me-2">Check-In: 18/12/2022</p>
-                                        <p class="me-2">Check-Out: 19/12/2022</p>
-                                        <p class="me-2">Adult: 2</p>
-                                        <p class="me-2">Kids: 0</p>
-                                    </span>
-                                </div>                            
-                            </div>
-                        
+                        <div class="border rounded bg-pink-1">
+                            <div class="container my-2 pt-4">
+                                <h6 class="text-white mb-4 fs-footer fw-700">Search Criteria</h6>
+                                <span class="d-flex flex-wrap text-white colour-group fs-footer fw-700"> 
+                                    <p class="me-2">Check-In: 18/12/2022</p>
+                                    <p class="me-2">Check-Out: 19/12/2022</p>
+                                    <p class="me-2">Adult: 2</p>
+                                    <p class="me-2">Kids: 0</p>
+                                </span>
+                            </div>                            
+                        </div>
+                    
                         <!-- Table -->
                         <div class="pt-4 fw-400 fs-body-2">          
                             <table class="table table-bordered table-striped text-center">
@@ -238,7 +262,9 @@
                                     <th>
                                         <span class="iconify" data-icon="bx:expand-vertical"></span>
                                     </th>
-                                    <th>Room</th>
+                                    <th>
+                                        Room <span class="iconify ms-2" data-icon="bxs:down-arrow"></span>
+                                    </th>
                                     <th>Room Type</th>
                                     <th>Avg. Price</th>
                                     <th>Total</th>
@@ -296,21 +322,26 @@
                                     <span class="border width-20  rounded-start p-2 text-center">Previous</span>
                                     <span class="fw-400 fw-700 fs-body-1 bg-pink-1 border width-5 p-2 text-center text-white">1</span>
                                     <span class="fw-400 fs-footer border width-15 rounded-end p-2 text-center">Next</span>
-    
+
                         </div>
 
+                        <!-- Button -->
                         <div class="d-flex justify-content-end">
                             <button class="primary-btn width-30 text-center fs-body-1 fw-700 text-white bdr-rad-2 py-3 my-3"> Book Now</button>
                         </div>
 
-                    </div>
-                </div>
-            </div>                    
-        </div>
-    </div>
+                        </div>
+                    </div> 
+
+                </div>     
+
+            </div>
+            
     </main>
 
-    <footer id="main-footer" class=" bg-neutral-1 text-white mt-3">
+                <!-- **************************END OF MAIN SECTION**************************** -->
+
+    <footer id="main-footer" class=" bg-neutral-footer text-white mt-3">
         <div class="container">
             <div class="row py-5">
                 <div class="col-lg-4 col-md-12 mt-5">
@@ -370,10 +401,11 @@
     </footer>
 
     <script src="js/bootstrap.js"></script>
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js" integrity="sha256-/xUj+3OJU5yExlq6GSYGSHk7tPXikynS7ogEvDej/m4=" crossorigin="anonymous"></script>
     <script src="js/aos.js"></script>
     <script src="js/swiper-bundle.min.js"></script>
-    <script src="https://code.iconify.design/2/2.2.1/iconify.min.js"></script>
-    <script src="js/main.js"></script>
+    <script src="https://code.iconify.design/2/2.2.1/iconify.min.js"></script> <!-- Please be sure you have this included for admin pages -->
+    <script src="js/main.js"></script>                                          <!-- It's for the icons in the sidenav -->
 
     <script>
         AOS.init();
